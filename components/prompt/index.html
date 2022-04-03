@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+
+    <link href="../../css/normalize.css" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li>
+                <a href="./components/modal/index.html" title="">Popup, Modal</a>
+            </li>
+        </ul>
+
+        <div id="site-main" class="site-main">
+            <div class="site-content container-fluid">
+                <div class="alert alert-warning">
+                    <p><span class="svg-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></span> After the website is created, the file owner will be set to [www], you can add your backup plan in after the site is successfully established, please<a class="link" href="/crontab">[Cron]</a>add scheduled backup tasks to the page!</p>
+                </div>
+                <div class="site-table-view mask-view">
+                    <div class="site-table">
+                        <div class="table-tools tools-top">
+                            <div class="pull-left">
+                                <button type="button" title="Add site" class="btn btn-success"><span>Add site</span></button>
+                                <button type="button" title="Default Page" class="btn btn-default"><span>Default Page</span></button>
+                                <button type="button" title="Default Website" class="btn btn-default"><span>Default Website</span></button>
+                                <button type="button" title="PHP CLI version" class="btn btn-default"><span>PHP CLI version</span></button>
+                                <div class="btn-dropdown">
+                                    <div class="btn-dropdown-value">
+                                        <span class="btn-dropdown-text">Category manager</span>
+                                        <span class="glyphicon glyphicon-triangle-bottom ml5"></span>
+                                    </div>
+                                    <ul class="btn-dropdown-options">
+                                        <li class="item active" data-id="-1">Category manager</li>
+                                        <li class="item " data-id="0">Default category</li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="item" data-id="type_sets">Category set</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-wraper my-10">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <span data-index="0">
+                                                <label><i data-checkbox="all"></i><input type="checkbox" class="checkbox-input"></label>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span class="not-select" data-index="1" data-sort="asc">
+                                                <span>Site name</span>
+                                                <span class="glyphicon glyphicon-triangle-top ml5"></span>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span class="not-select" data-index="2" data-sort="desc">
+                                                <span>Status</span>
+                                                <span class="glyphicon glyphicon-triangle-bottom ml5"></span>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span data-index="3">
+                                                <span>Back up</span>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span data-index="4">
+                                                <span>Document Root</span>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span class="not-select" data-index="5" data-sort="desc">
+                                                <span>Expired date</span>
+                                                <span class="glyphicon glyphicon-triangle-bottom ml5"></span>
+                                            </span>
+                                        </th>
+                                        <th><span data-index="6"><span>Note</span></span></th>
+                                        <th><span data-index="7"><span>PHP</span></span></th>
+                                        <th><span data-index="8"><span>SSL</span></span></th>
+                                        <th>
+                                            <span data-index="9" style="width: 42px; display: initial;">
+                                                <span>Attack</span>
+                                            </span>
+                                            <a class="bt-ico-ask" style="border-color: rgb(102, 102, 102); color: rgb(102, 102, 102);">?</a>
+                                        </th>
+                                        <th><span data-index="10"><span>Operation</span></span></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td colspan="11" style="text-align:center;">Site list is empty</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-tools tools-bottom"></div>
+                    </div><!-- .site-table -->
+
+                    <div class="mask-overlay">
+                        <div class="prompt">
+                            <div class="prompt-content">Web server is not installed, <a href="javascript:;" class="link" onclick="bt.soft.install('nginx')">Install Nginx</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:;" class="link" onclick="bt.soft.install('apache')">Install Apache</a></div>
+                        </div><!-- .prompt -->
+                    </div><!-- .mask-overlay -->
+                </div><!-- .site-table-view -->
+            </div><!-- .site-content -->
+        </div><!-- #site-main -->
+    </div><!-- #app -->
+
+    <!-- <div class="modal" type="page" times="2" showtime="0" contype="string">
+        <div class="modal-header">nginxSoftware Installation</div>
+        <div class="modal-content">
+            <div class="modal-wrapper">
+                <div class="input-group">
+                    <label for="version">Version to install</label>
+                    <select id="version" name="version">
+                        <option>nginx 1.21</option>
+                        <option>nginx 1.20</option>
+                        <option>nginx 1.19</option>
+                        <option>nginx 1.18</option>
+                        <option>nginx 1.17</option>
+                        <option>nginx 1.16</option>
+                        <option>nginx -Tengine2.2</option>
+                        <option>nginx 1.15</option>
+                        <option>nginx 1.14</option>
+                        <option>nginx 1.12</option>
+                        <option>nginx 1.8</option>
+                    </select>
+                </div>
+
+                <div class="input-group label-group">Method：<label data-title="installed in a long time (30 minutes to 3 hours), suitable for production environment">Compiled<input type="checkbox"></label><label data-title="i.e. rpm, installed in a very short time (5~10 minutes), with performance and stability a bit lower than compiled">Fast<input type="checkbox" checked=""></label></div>
+
+                <div class="install_modules" style="display: none;">
+                    <div>
+                        <button onclick="bt.soft.show_make_args('nginx')" class="btn btn-success btn-sm">Add custom module</button>
+                    </div>
+                    <div class="select_modules divtable">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th width="0px"></th>
+                                    <th width="90px">Module name</th>
+                                    <th>Module details</th>
+                                    <th width="70px">Operation</th>
+                                </tr>
+                            </thead>
+                            <tbody class="modules_list"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="layer.closeAll()">Close</button>
+                    <button type="button" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <span class="modal-close svg-icon"><a class="close-link" href="javascript:;"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></a></span>
+        <span class="modal-resize"></span>
+    </div> -->
+
+    <script src="../../vendor/jquery-1.10.2.min.js?version=6.8.23"></script>
+    <!-- <script src="../../vendor/layer/layer.min.js?version=6.8.23"></script> -->
+    <!-- <script src="../../vendor/layer-dev/src/layer.js?version=3.5.1"></script> -->
+    <script src="../../js/flat.js?version=1.0.0"></script>
+    <script src="../../js/index.js?version=1.0.0"></script>
+</body>
+</html>
